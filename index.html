@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>I am - Aligned: Affirmations made for you</title>
+  <meta name="description" content="Release negative thoughts. Reinforce positive ones. Personal affirmation sessions, spoken over calm music, at the moments that matter.">
+  <meta property="og:title" content="I am - Aligned">
+  <meta property="og:description" content="Release negative thoughts. Reinforce positive ones. Affirmations made for you.">
+  <meta property="og:image" content="https://iamaligned.app/images/og.jpg">
+  <meta property="og:url" content="https://iamaligned.app/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0F0A1E;
+      --bg-glow: #1A1230;
+      --card: #160F29;
+      --border: #2A1F40;
+      --text: #F5E6C8;
+      --text-2: #B8A88A;
+      --text-3: #7A6F5F;
+      --accent: #D4A574;
+      --purple: #8B6CB5;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 72px 0 56px;
+      background: radial-gradient(ellipse 70% 55% at 50% 30%, var(--bg-glow), var(--bg) 70%);
+    }
+    .glyph { width: 112px; height: auto; animation: breathe 6s ease-in-out infinite; }
+    @keyframes breathe { 0%, 100% { opacity: .75; transform: scale(.96); } 50% { opacity: 1; transform: scale(1.03); } }
+    @media (prefers-reduced-motion: reduce) { .glyph { animation: none; } }
+    .name { font-size: 15px; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; color: var(--text-2); margin-top: 20px; }
+    h1 { font-size: clamp(36px, 7vw, 60px); font-weight: 300; letter-spacing: -.02em; line-height: 1.12; margin: 18px auto 0; max-width: 780px; }
+    h1 span { color: var(--accent); }
+    .lede { font-size: clamp(17px, 2.4vw, 20px); color: var(--text-2); max-width: 600px; margin: 22px auto 0; font-weight: 300; }
+    .cta { display: inline-flex; align-items: center; gap: 10px; margin-top: 34px; padding: 14px 26px; border-radius: 999px; border: 1px solid var(--accent); color: var(--text); font-weight: 500; font-size: 15px; }
+    .cta small { color: var(--text-3); font-weight: 400; }
+    .tagline { margin-top: 18px; color: var(--text-3); font-size: 14px; letter-spacing: .04em; }
+
+    /* Sections */
+    section { padding: 72px 0; }
+    .eyebrow { color: var(--accent); font-size: 13px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; }
+    h2 { font-size: clamp(28px, 4.4vw, 40px); font-weight: 300; letter-spacing: -.01em; line-height: 1.2; margin-top: 12px; }
+    .sub { color: var(--text-2); max-width: 620px; margin-top: 14px; font-weight: 300; font-size: 17px; }
+    .center { text-align: center; }
+    .center .sub { margin-left: auto; margin-right: auto; }
+
+    /* Screens */
+    .screens { display: flex; gap: 22px; overflow-x: auto; padding: 40px 4px 12px; scroll-snap-type: x mandatory; }
+    .screen { flex: 0 0 220px; scroll-snap-align: center; text-align: center; }
+    .phone { border-radius: 26px; border: 1px solid var(--border); overflow: hidden; background: #000; box-shadow: 0 20px 50px rgba(0,0,0,.45), 0 0 60px rgba(139,108,181,.12); }
+    .phone img { display: block; width: 100%; height: auto; }
+    .screen p { color: var(--text-2); font-size: 14px; margin-top: 14px; }
+    @media (min-width: 1100px) { .screens { justify-content: center; overflow: visible; } }
+
+    /* Steps */
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; margin-top: 40px; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 18px; padding: 26px; }
+    .num { width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--accent); color: var(--accent); display: grid; place-items: center; font-size: 14px; font-weight: 500; }
+    .card h3 { font-size: 18px; font-weight: 500; margin-top: 16px; }
+    .card p { color: var(--text-2); font-size: 15px; margin-top: 8px; font-weight: 300; }
+
+    /* Split feature */
+    .split { display: grid; grid-template-columns: 1fr; gap: 40px; align-items: center; }
+    .split .phone { max-width: 260px; margin: 0 auto; }
+    @media (min-width: 820px) { .split { grid-template-columns: 1.2fr 1fr; } .split.flip > :first-child { order: 2; } }
+    ul.ticks { list-style: none; margin-top: 22px; }
+    ul.ticks li { position: relative; padding-left: 26px; color: var(--text-2); margin-top: 10px; font-weight: 300; }
+    ul.ticks li::before { content: ""; position: absolute; left: 2px; top: 10px; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); opacity: .8; }
+
+    /* Privacy band */
+    .band { background: linear-gradient(180deg, var(--bg), var(--bg-glow) 50%, var(--bg)); }
+    .pills { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 28px; }
+    .pill { border: 1px solid var(--border); background: var(--card); color: var(--text); border-radius: 999px; padding: 9px 18px; font-size: 14px; }
+
+    /* Closing */
+    .closing { text-align: center; padding-bottom: 88px; }
+    .closing .glyph { width: 72px; }
+
+    footer { border-top: 1px solid var(--border); padding: 30px 0 40px; color: var(--text-3); font-size: 13px; }
+    footer .wrap { display: flex; flex-wrap: wrap; gap: 14px 28px; justify-content: space-between; align-items: center; }
+    footer nav { display: flex; flex-wrap: wrap; gap: 8px 22px; }
+    footer a { color: var(--text-2); }
+    .note { color: var(--text-3); font-size: 13px; max-width: 640px; margin: 28px auto 0; }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="wrap">
+      <img class="glyph" src="images/glyph.png" alt="">
+      <div class="name">I am - Aligned</div>
+      <h1>Release negative thoughts.<br><span>Reinforce positive ones.</span></h1>
+      <p class="lede">Check in with how you feel and what's on your mind, and get an affirmation session written just for you, spoken aloud over calm music.</p>
+      <span class="cta">Coming soon to Google Play <small>Android</small></span>
+      <p class="tagline">Protect your peace.</p>
+    </div>
+  </header>
+
+  <section>
+    <div class="wrap center">
+      <div class="eyebrow">Made for you, and only you</div>
+      <h2>Nothing pre-written. Every session is yours.</h2>
+      <div class="screens">
+        <div class="screen"><div class="phone"><img src="images/lock.jpg" alt="A check-in before opening a social app" loading="lazy"></div><p>A mindful pause before you scroll</p></div>
+        <div class="screen"><div class="phone"><img src="images/thought.jpg" alt="Writing the thought behind a feeling" loading="lazy"></div><p>Catch the thought behind the feeling</p></div>
+        <div class="screen"><div class="phone"><img src="images/s1.jpg" alt="A personal I am affirmation" loading="lazy"></div><p>Affirmations written just for you</p></div>
+        <div class="screen"><div class="phone"><img src="images/s2.jpg" alt="A guided practice" loading="lazy"></div><p>Spoken aloud over calm music</p></div>
+        <div class="screen"><div class="phone"><img src="images/home.jpg" alt="The home screen with topics" loading="lazy"></div><p>Check in anytime, on what matters</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="center">
+        <div class="eyebrow">How it works</div>
+        <h2>Under a minute, at the moments that matter</h2>
+      </div>
+      <div class="steps">
+        <div class="card"><div class="num">1</div><h3>Check in</h3><p>Two taps to say how you're feeling right now. Feeling low or feeling great, your session meets you there.</p></div>
+        <div class="card"><div class="num">2</div><h3>Name the thought</h3><p>Write what's on your mind, pick a topic, or skip it. The session is about what you just shared.</p></div>
+        <div class="card"><div class="num">3</div><h3>Shift your vibe</h3><p>An "I am" affirmation, a gratitude or visualization practice, and a reflection, spoken in a calm voice.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap split">
+      <div>
+        <div class="eyebrow">App Lock</div>
+        <h2>A pause before the scroll</h2>
+        <p class="sub">Choose the apps that pull you into doomscrolling. When you open one, a short check-in comes first. After it, you can still open the app or skip it.</p>
+        <ul class="ticks">
+          <li>Notices only which app is opening, nothing on your screen</li>
+          <li>Sessions fit the moment, like comparison on social or abundance on finance apps</li>
+          <li>One check-in an hour at most, and off whenever you like</li>
+        </ul>
+      </div>
+      <div class="phone"><img src="images/lock.jpg" alt="App Lock check-in" loading="lazy"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap split flip">
+      <div>
+        <div class="eyebrow">Rituals</div>
+        <h2>Morning, evening, and in between</h2>
+        <p class="sub">Build the habit with check-ins at the times you choose and gentle reminders through the day, each one carrying an affirmation.</p>
+        <ul class="ticks">
+          <li>Built around what you're manifesting, your values and the people who matter</li>
+          <li>Speaks your language: the Universe, God, Source, or plain psychology</li>
+          <li>Six natural voices and ambient music, with recent sessions saved for offline</li>
+        </ul>
+      </div>
+      <div class="phone"><img src="images/plan.jpg" alt="A personal plan built from setup" loading="lazy"></div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap center">
+      <div class="eyebrow">Private by design</div>
+      <h2>Your thoughts stay yours</h2>
+      <p class="sub">Your setup answers and session history live on your phone. What you share is used only to write your session and isn't saved on our servers.</p>
+      <div class="pills">
+        <span class="pill">No ads</span>
+        <span class="pill">No account</span>
+        <span class="pill">No sign-up</span>
+        <span class="pill">Never sold</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="closing">
+    <div class="wrap">
+      <img class="glyph" src="images/glyph.png" alt="">
+      <h2>Feel it first. Then watch it follow.</h2>
+      <span class="cta">Coming soon to Google Play <small>Android</small></span>
+      <p class="note">I am - Aligned is a self-care practice, not therapy or medical advice. If you're in crisis, call or text 988 in the US, or contact your local emergency number.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div>&copy; 2026 Hall Labs LLC · I am - Aligned&trade;</div>
+      <nav>
+        <a href="https://halllabs.co/aligned/guide.html">Guide</a>
+        <a href="https://halllabs.co/aligned/privacy.html">Privacy</a>
+        <a href="https://halllabs.co/aligned/terms.html">Terms</a>
+        <a href="mailto:info@halllabs.co">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>
