@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>I am - Aligned: Affirmations made for you</title>
-  <meta name="description" content="Release negative thoughts. Reinforce positive ones. Personal affirmation sessions, spoken over calm music, at the moments that matter.">
+  <title>I am Aligned: AI Affirmations written for how you feel</title>
+  <meta name="description" content="Personalized affirmations written for how you feel right now, spoken over calm music, with check-ins through your day: morning, evening, and before you scroll. For Android.">
   <meta property="og:title" content="I am - Aligned">
-  <meta property="og:description" content="Release negative thoughts. Reinforce positive ones. Affirmations made for you.">
+  <meta property="og:description" content="Personalized affirmations for how you feel, morning, evening and all day.">
   <meta property="og:image" content="https://iamaligned.app/images/og.jpg">
   <meta property="og:url" content="https://iamaligned.app/">
   <meta name="twitter:card" content="summary_large_image">
@@ -53,6 +53,7 @@
     h1 { font-size: clamp(36px, 7vw, 60px); font-weight: 300; letter-spacing: -.02em; line-height: 1.12; margin: 18px auto 0; max-width: 780px; }
     h1 span { color: var(--gold); }
     .lede { font-size: clamp(17px, 2.4vw, 20px); color: var(--text-2); max-width: 600px; margin: 22px auto 0; font-weight: 300; }
+    a.cta:hover { text-decoration: none; background: var(--bg-glow); }
     .cta { display: inline-flex; align-items: center; gap: 10px; margin-top: 34px; padding: 14px 26px; border-radius: 999px; border: 1px solid var(--accent); color: var(--text); font-weight: 500; font-size: 15px; background: var(--card); }
     .cta small { color: var(--text-3); font-weight: 400; }
     .tagline { margin-top: 18px; color: var(--text-3); font-size: 14px; letter-spacing: .04em; }
@@ -66,12 +67,12 @@
     .center .sub { margin-left: auto; margin-right: auto; }
 
     /* Screens */
-    .screens { display: flex; gap: 22px; overflow-x: auto; padding: 40px 4px 12px; scroll-snap-type: x mandatory; }
-    .screen { flex: 0 0 220px; scroll-snap-align: center; text-align: center; }
+    .screens { display: flex; gap: 16px; overflow-x: auto; padding: 40px 4px 12px; scroll-snap-type: x mandatory; }
+    .screen { flex: 0 0 200px; scroll-snap-align: center; text-align: center; }
     .phone { border-radius: 26px; border: 1px solid var(--border); overflow: hidden; background: #000; box-shadow: 0 18px 40px rgba(45,31,78,.22), 0 4px 12px rgba(45,31,78,.12); }
     .phone img { display: block; width: 100%; height: auto; }
     .screen p { color: var(--text-2); font-size: 14px; margin-top: 14px; }
-    @media (min-width: 1100px) { .screens { justify-content: center; overflow: visible; } }
+    @media (min-width: 1100px) { .screens { justify-content: center; overflow: visible; } .screen { flex-basis: 160px; } }
 
     /* Steps */
     .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; margin-top: 40px; }
@@ -110,9 +111,9 @@
     <div class="wrap">
       <img class="glyph" src="images/glyph.png" alt="">
       <div class="name">I am - Aligned</div>
-      <h1>Release negative thoughts.<br><span>Reinforce positive ones.</span></h1>
-      <p class="lede">Check in with how you feel and what's on your mind, and get an affirmation session written just for you, spoken aloud over calm music.</p>
-      <span class="cta">Coming soon to Google Play <small>Android</small></span>
+      <h1>Affirmations written<br><span>for how you feel.</span></h1>
+      <p class="lede">Most affirmation apps give everyone the same cards. I am - Aligned writes yours, from how you feel and what's on your mind, and checks in with you through your day.</p>
+      <a class="cta" href="https://play.google.com/store/apps/details?id=co.halllabs.iamaligned&amp;utm_source=iamaligned.app&amp;utm_campaign=website">Get it on Google Play <small>Free for 3 days</small></a>
       <p class="tagline">Protect your peace.</p>
     </div>
   </header>
@@ -122,10 +123,11 @@
       <div class="eyebrow">Made for you, and only you</div>
       <h2>Nothing pre-written. Every session is yours.</h2>
       <div class="screens">
-        <div class="screen"><div class="phone"><img src="images/lock.jpg" alt="A check-in before opening a social app" loading="lazy"></div><p>A mindful pause before you scroll</p></div>
-        <div class="screen"><div class="phone"><img src="images/thought.jpg" alt="Writing the thought behind a feeling" loading="lazy"></div><p>Catch the thought behind the feeling</p></div>
         <div class="screen"><div class="phone"><img src="images/s1.jpg" alt="A personal I am affirmation" loading="lazy"></div><p>Affirmations written just for you</p></div>
+        <div class="screen"><div class="phone"><img src="images/thought.jpg" alt="Writing the thought behind a feeling" loading="lazy"></div><p>Catch the thought behind the feeling</p></div>
+        <div class="screen"><div class="phone"><img src="images/s3.jpg" alt="A reflection that answers a doubt" loading="lazy"></div><p>Release the doubt. Reinforce what's true.</p></div>
         <div class="screen"><div class="phone"><img src="images/s2.jpg" alt="A guided practice" loading="lazy"></div><p>Spoken aloud over calm music</p></div>
+        <div class="screen"><div class="phone"><img src="images/plan.jpg" alt="A personal plan built from setup" loading="lazy"></div><p>Built around what you're calling in</p></div>
         <div class="screen"><div class="phone"><img src="images/home.jpg" alt="The home screen with topics" loading="lazy"></div><p>Check in anytime, on what matters</p></div>
       </div>
     </div>
@@ -148,6 +150,23 @@
   <section>
     <div class="wrap split">
       <div>
+        <div class="eyebrow">Through your day</div>
+        <h2>It checks in, so you don't have to remember</h2>
+        <p class="sub">Each check-in is a small moment to notice your thoughts and feelings, so you can shift your mindset one day at a time.</p>
+        <ul class="ticks">
+          <li>Morning and evening check-ins at the times you choose</li>
+          <li>Reminders every 1, 2, 3 or 4 hours that ask how you're feeling. Tap Good, Okay or Low right from the notification</li>
+          <li>Built around what you're manifesting, your values and the people who matter, in your language: the Universe, God, Source, or plain psychology</li>
+          <li>Seven natural voices and ambient music, with recent sessions saved for offline</li>
+        </ul>
+      </div>
+      <div class="phone"><img src="images/reminder.jpg" alt="A reminder asking how you feel, with Good, Okay and Low" loading="lazy"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap split flip">
+      <div>
         <div class="eyebrow">App Lock</div>
         <h2>A pause before the scroll</h2>
         <p class="sub">Choose the apps that pull you into doomscrolling. When you open one, a short check-in comes first. After it, you can still open the app or skip it.</p>
@@ -158,22 +177,6 @@
         </ul>
       </div>
       <div class="phone"><img src="images/lock.jpg" alt="App Lock check-in" loading="lazy"></div>
-    </div>
-  </section>
-
-  <section>
-    <div class="wrap split flip">
-      <div>
-        <div class="eyebrow">Rituals</div>
-        <h2>Morning, evening, and in between</h2>
-        <p class="sub">Build the habit with check-ins at the times you choose and gentle reminders through the day, each one carrying an affirmation.</p>
-        <ul class="ticks">
-          <li>Built around what you're manifesting, your values and the people who matter</li>
-          <li>Speaks your language: the Universe, God, Source, or plain psychology</li>
-          <li>Six natural voices and ambient music, with recent sessions saved for offline</li>
-        </ul>
-      </div>
-      <div class="phone"><img src="images/plan.jpg" alt="A personal plan built from setup" loading="lazy"></div>
     </div>
   </section>
 
@@ -195,7 +198,8 @@
     <div class="wrap">
       <img class="glyph" src="images/glyph.png" alt="">
       <h2>Feel it first. Then watch it follow.</h2>
-      <span class="cta">Coming soon to Google Play <small>Android</small></span>
+      <a class="cta" href="https://play.google.com/store/apps/details?id=co.halllabs.iamaligned&amp;utm_source=iamaligned.app&amp;utm_campaign=website">Get it on Google Play <small>Android</small></a>
+      <p class="note">Try the yearly plan free for 3 days, then $39.99 a year, or $7.99 a month. Cancel anytime in Google Play.</p>
       <p class="note">I am - Aligned is a self-care practice, not therapy or medical advice. If you're in crisis, call or text 988 in the US, or contact your local emergency number.</p>
     </div>
   </section>
